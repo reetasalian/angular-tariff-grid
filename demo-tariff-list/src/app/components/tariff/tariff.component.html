@@ -1,0 +1,49 @@
+<div class="container">
+  <!-- Filtering -->
+  <div class="row filter-block">
+    <h2 id="tariff-title">Tariff List</h2>
+    <!-- Filtering -->
+    <app-filter-panel
+      (notifyParent)="getFilterConfiguration($event)"
+    ></app-filter-panel>
+  </div>
+  <!-- Sorting -->
+  <div class="row sorting-block">
+    <div class="col-8 col-md-8"></div>
+    <div class="col-4 col-md-4">
+      <ng-select
+        [items]="sortOptions"
+        bindLabel="name"
+        placeholder="Sort By"
+        (change)="onSortingChanged($event)"
+        [(ngModel)]="sortSelection"
+      >
+      </ng-select>
+    </div>
+  </div>
+  <!-- Tariff List -->
+  <div
+    class="row tariff-list-block"
+    *ngIf="tariffData && tariffData.length > 0; else noDataFound"
+  >
+    <app-tariff-list
+      [tableRef]="tarrifListRef"
+      [data]="tariffData"
+    ></app-tariff-list>
+  </div>
+</div>
+
+<!-- No Data Found Block -->
+<ng-template #noDataFound let-tariffData="data">
+  <h2 class="no-data-found">No Records Found</h2>
+</ng-template>
+
+<ng-template #tarrifListRef let-tariffData="data">
+  <ul class="list-group mb-3">
+    <app-tariff-list-item
+      *ngFor="let tariff of tariffData; trackBy: trackByFn"
+      [tariffItem]="tariff"
+    ></app-tariff-list-item>
+  </ul>
+</ng-template>
+<router-outlet></router-outlet>

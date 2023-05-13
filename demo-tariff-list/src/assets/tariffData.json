@@ -1,0 +1,76 @@
+{
+  "tariffs": [
+    {
+      "name": "Basic",
+      "id" : 1,
+      "benefits": [
+        "Unlimited data",
+        "24/7 customer support"
+      ],
+      "price": 20.99,
+      "download" : 10,
+      "upload" : 2
+    },
+    {
+      "name": "Standard",
+      "id" : 2,
+      "benefits": [
+        "Unlimited data",
+        "Free router",
+        "24/7 customer support"
+      ],
+      "price": 315.99,
+      "download" : 350,
+      "upload" : 150
+    },
+    {
+      "name": "Premium",
+      "id" : 3,
+      "benefits": [
+        "Unlimited data",
+        "Free router",
+        "Premium customer support",
+        "5G connectivity"
+      ],
+      "price": 79.99,
+      "download" : 50,
+      "upload" : 20
+    },
+    {
+      "name": "Pro",
+      "id" : 4,
+      "benefits": [
+        "Priority customer support", 
+        "1TB cap"
+      ],
+      "price": 159.99,
+      "download" : 250,
+      "upload" : 100
+    },
+    {
+      "name": "Elite",
+      "id" : 5,
+      "benefits": [
+        "Unlimited data",
+        "Free Netflix",
+        "Premium customer support"
+      ],
+      "price": 119.99,
+      "download" : 100,
+      "upload" : 30
+    },
+    {
+      "name": "Ultra",
+      "id" : 6,
+      "benefits": [
+        "Unlimited data",
+        "Free router",
+        "Unlimited calls to landlines and mobiles",
+        "Free installation"
+      ],
+      "price": 129.99,
+      "download" : 150,
+      "upload" : 50
+    }
+  ]
+}
