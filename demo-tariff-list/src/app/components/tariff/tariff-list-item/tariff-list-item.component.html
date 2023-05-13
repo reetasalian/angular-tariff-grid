@@ -1,0 +1,35 @@
+<div class="container" *ngIf="this.tariffItem">
+  <div class="row justify-content-between">
+    <div class="col-sm">{{ tariffItem.id }}</div>
+    <div class="col-sm">{{ tariffItem.name }}</div>
+    <div class="col-sm">
+      <div class="download-speed">
+        <span class="speed-icon"><i class="fa fa-regular fa-download"></i></span>
+        <span>{{ tariffItem.download }} Mbit/s</span>
+      </div>
+      <div class="upload-speed mobile-hidden">
+        <span class="speed-icon"><i class="fa fa-regular fa-upload"></i></span>
+        <span>{{ tariffItem.upload }} Mbit/s</span>
+      </div>
+    </div>
+    <div class="col-sm tablet-mobile-hidden">
+      <li *ngFor="let benefit of tariffItem.benefits">
+        {{ benefit }}
+      </li>
+    </div>
+    <div class="col-sm">
+      <div>
+        <b>{{ tariffItem.price |currency:'EUR':true }}</b>
+      </div>
+      <button
+        id="btn-tariff"
+        type="button"
+        class="btn btn-warning"
+        (click)="getTariffDetails(tariffItem)"
+      >
+        <span class="mobile-hidden"style="padding: 5px;">To Tariff</span>
+        <i class="fa fa-angle-right" aria-hidden="true"></i>
+      </button>
+    </div>
+  </div>
+</div>

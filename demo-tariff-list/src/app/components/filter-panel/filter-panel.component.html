@@ -1,0 +1,60 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-4">
+      <div class="label-field"><mat-label>Price</mat-label></div>
+      <div>
+        <mat-slider min="0" max="1000" [discrete]="thumbLabel">
+          <input
+            [ngModel]="filterPanelFields.price.min"
+            (ngModelChange)="onFilterChange($event, 'price', 'min')"
+            matSliderStartThumb
+          />
+          <input
+            [ngModel]="filterPanelFields.price.max"
+            (ngModelChange)="onFilterChange($event, 'price', 'max')"
+            matSliderEndThumb
+          />
+        </mat-slider>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="label-field"><mat-label>Download Speed</mat-label></div>
+      <div>
+        <mat-slider min="0" max="1000" [discrete]="thumbLabel">
+          <input
+            [ngModel]="filterPanelFields.download.min"
+            (ngModelChange)="onFilterChange($event, 'download', 'min')"
+            matSliderStartThumb
+          />
+          <input
+            [ngModel]="filterPanelFields.download.max"
+            (ngModelChange)="onFilterChange($event, 'download', 'max')"
+            matSliderEndThumb
+          />
+        </mat-slider>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="label-field"><mat-label>Upload Speed</mat-label></div>
+      <div>
+        <mat-slider min="0" max="1000" [discrete]="thumbLabel">
+          <input
+            [ngModel]="filterPanelFields.upload.min"
+            (ngModelChange)="onFilterChange($event, 'upload', 'min')"
+            matSliderStartThumb
+          />
+          <input
+            [ngModel]="filterPanelFields.upload.max"
+            (ngModelChange)="onFilterChange($event, 'upload', 'max')"
+            matSliderEndThumb
+          />
+        </mat-slider>
+      </div>
+    </div>
+    <div class="col-md-1 btn-reset-filter">
+      <button id="btnReset" title="Reset" (click)="resetFilter()">
+        <i class="fa fas fa-undo" aria-hidden="true"></i>
+      </button>
+    </div>
+  </div>
+</div>

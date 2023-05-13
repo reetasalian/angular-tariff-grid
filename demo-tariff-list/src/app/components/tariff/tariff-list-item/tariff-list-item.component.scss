@@ -1,0 +1,38 @@
+.container {
+  margin: 5px 0;
+  border: 1px solid rgb(0 0 0 / 37%);
+  border-radius: 5px;
+  padding: 5px;
+}
+
+#btn-tariff {
+  padding: 3px 6px;
+}
+
+.speed-icon{
+  padding: 5px;
+}
+
+// Tablet Device
+@media screen and (min-width: 720px) and (max-width: 1024px) {
+  .tablet-mobile-hidden {
+    display: none;
+  }
+}
+
+// Mobile Device
+@media screen and (min-width: 320px) and (max-width: 720px) {
+    .tablet-mobile-hidden {
+      display: none;
+    }
+
+    .mobile-hidden{
+        display: none;
+    }
+
+    .row {
+      div {
+        flex: 1;
+      }
+    }
+  }
