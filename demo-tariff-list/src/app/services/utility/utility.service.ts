@@ -10,7 +10,7 @@ export class UtilityService {
 
   constructor() {}
 
-  sortData(data: any, key: string, order: string = 'ascending'): ITariff {
+  sortData(data: any[], key: string, order: string = 'ascending'): any[] {
     data.sort((a: any, b: any) => {
       const sortOrder = order === 'ascending' ? 1 : -1;
       if (this.getTypeValue(a[key]) > this.getTypeValue(b[key])) {

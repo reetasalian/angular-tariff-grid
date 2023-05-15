@@ -1,6 +1,8 @@
-Tariff List Angular Project
+## Tariff List Angular Project
 
-This is a simple Angular project that displays a list of tariffs for a company. The project uses JSON-server to run the API, npm run start to start the application, and npm run test to run the unit test cases.
+This is a Angular project that displays a list of tariffs for a company. The project uses JSON-server to run the API, npm run start to start the application, and npm run test to run the unit test cases.
+
+Navigate to the `demo-tariff-list` directory and execute the following commands.
 
 ## Installation
 
@@ -38,7 +40,7 @@ The test results will be displayed in the terminal window.
 
 - The `src/app` directory contains the Angular components, services, and models used in the project.
 
-- The `src/assets` directory contains the json mocked tariff data used in the project.
+- The `src/assets` directory contains the mock tariff data in JSON format utilized in the project.
 
 - The `src/styles` directory contains the imported CSS styles from Bootstrap, angular material etc. used in the project.
 
