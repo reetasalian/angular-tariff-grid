@@ -4,6 +4,11 @@ import { TariffComponent } from './tariff.component';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { MatInputModule } from '@angular/material/input';
+import { FilterPanelComponent } from '../filter-panel/filter-panel.component';
+import { NgSelectModule } from '@ng-select/ng-select';
+import { MatSliderModule } from '@angular/material/slider';
+import { FormsModule } from '@angular/forms';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 
 describe('TariffComponent', () => {
   let component: TariffComponent;
@@ -11,8 +16,8 @@ describe('TariffComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [HttpClientModule, RouterModule],
-      declarations: [ TariffComponent ]
+      imports: [HttpClientTestingModule, RouterModule, NgSelectModule, MatInputModule, MatSliderModule, FormsModule],
+      declarations: [ TariffComponent, FilterPanelComponent ]
     })
     .compileComponents();
 
@@ -23,5 +28,5 @@ describe('TariffComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
-  });
+  });  
 });
